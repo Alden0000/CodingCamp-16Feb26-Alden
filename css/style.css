@@ -1,0 +1,215 @@
+:root {
+    --bg-color: #0f172a;
+    --card-color: #1e293b;
+    --text-color: #ffffff;
+    --input-bg: #334155;
+    --accent: #06b6d4;
+    --danger: #ef4444;
+}
+
+body.light {
+    --bg-color: #f1f5f9;
+    --card-color: #ffffff;
+    --text-color: #0f172a;
+    --input-bg: #e2e8f0;
+    --accent: #2563eb;
+    --danger: #dc2626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.3s ease;
+    color: var(--text-color);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    background: var(--card-color);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    width: 45px;
+    height: 22px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--accent);
+}
+
+input:checked + .slider:before {
+    transform: translateX(23px);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.input-group button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.controls select,
+.controls button {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+.controls select {
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.controls button {
+    background: var(--danger);
+    color: white;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--input-bg);
+    padding: 10px;
+    color: var(--accent);
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--input-bg);
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.completed {
+    background: #16a34a;
+    color: white;
+}
+
+.pending {
+    background: #f59e0b;
+    color: white;
+}
+
+.action-btn {
+    padding: 5px 8px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.complete-btn {
+    background: #22c55e;
+    color: white;
+}
+
+.delete-btn {
+    background: var(--danger);
+    color: white;
+}
+
+.empty {
+    color: gray;
+}
+
+body,
+.card,
+th,
+td,
+.input-group input,
+.controls select {
+    transition: 0.3s ease;
+}
