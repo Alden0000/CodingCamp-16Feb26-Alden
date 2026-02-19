@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card">
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <span>🌙</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>☀️</span>
+        </div>
+
+        <h1>Task Manager</h1>
+
+        <!-- Input Section -->
+        <form id="todo-form" class="input-group">
+            <input type="text" id="task-input" placeholder="Enter task..." />
+            <input type="date" id="date-input" />
+            <button type="submit">Add</button>
+        </form>
+
+        <!-- Controls -->
+        <div class="controls">
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="today">Today</option>
+                <option value="upcoming">Upcoming</option>
+                <option value="completed">Completed</option>
+            </select>
+
+            <button id="delete-all">Delete All</button>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+                <tr>
+                    <td colspan="4" class="empty">No tasks yet</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
